@@ -36,6 +36,14 @@ LinkedDeque<Element>::LinkedDeque(const LinkedDeque<Element>& deque) {
 }
 
 template <class Element>
+boole LinkedDeque::isEmpty() {
+	if (num_elements == 0) {
+		return true;
+	}
+	return false;
+}
+
+template <class Element>
 void LinkedDeque<Element>::insertFront(const Element & element) {
 	//Creem l'objecte node de forma dinamica:
 	Node* tmp = new Node();
