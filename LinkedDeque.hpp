@@ -72,6 +72,24 @@ void LinkedDeque<Element>::insertFront(const Element & element) {
 }
 
 template <class Element>
+void LinkedDeque::insertRear(const Element & element){
+    Node* nou= new Node<Element>(element);
+    Node* tmp;
+    
+    tmp = rear->getPrevious();
+    
+    nou->setNext(rear);
+    nou->setPreviious(tmp);
+    
+    tmp->setNext(nou);
+    rear->setPreviious(nou);
+    
+    if(front->getNext() == rear){
+        front->setNext(nou);
+    }
+    num_elements++;
+}
+template <class Element>
 void LinkedDeque<Element>::deleteFront() {
 	//Primer tractem l'excepcio en cas que la deque estigui buida
 	if (isEmpty()) {
