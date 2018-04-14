@@ -111,7 +111,27 @@ void LinkedDeque<Element>::deleteFront() {
 		delete tmp;
 	}
 }
+LinkedDeque::deleteRear(){
 
+	if (isEmpty()) {
+		throw new DequeEmptyException();
+	}
+	else {
+		//Eliminem el node rear:
+		Node* tmp = rear;
+		if (rear->prev != nullptr)
+		{
+			rear = rear->prev;
+			rear->front = nullptr;
+		}
+		else
+		{
+			rear = nullptr;
+		}
+		num_elements--;
+		delete tmp;
+	}
+}
 
 template <class Element>
 LinkedDeque<Element>::~LinkedDeque() {
