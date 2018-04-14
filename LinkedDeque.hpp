@@ -44,6 +44,13 @@ boole LinkedDeque::isEmpty() {
 }
 
 template <class Element>
+LinkedDeque::print() {
+	for (int i = 0; i < num_elements; i++) {
+		
+	}
+}
+
+template <class Element>
 void LinkedDeque<Element>::insertFront(const Element & element) {
 	//Creem l'objecte node de forma dinamica:
 	Node* tmp = new Node();
