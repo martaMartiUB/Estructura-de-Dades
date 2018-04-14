@@ -13,23 +13,23 @@
 
 #ifndef NODE_H
 #define NODE_H
-template <class T> 
+template <class Element> 
 class Node {
 public:
     Node();
-    Node(const T &elem);
+    Node(const Element &elem);
     Node(const Node& orig);
     virtual ~Node();
-    Node<T>* getNext();
-    Node<T>* getPrevious();
-    const T& getElement();
-    void setNext(Node<T>*);
-    void setPreviious(Node<T>*);
+    Node<Element>* getNext();
+    Node<Element>* getPrevious();
+    const Element& getElement();
+    void setNext(Node<Element>*);
+    void setPreviious(Node<Element>*);
     
 private:
-    Node<T>* next;
-    Node<T>* previous;
-    T *element;
+    Node<Element>* next;
+    Node<Element>* previous;
+    Element *element;
 };
 
 #endif /* NODE_H */

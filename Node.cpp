@@ -13,42 +13,42 @@
 
 #include "Node.h"
 
-template <class T> Node<T>::Node() {                              //Cosntructor per defecte
+template <class Element> Node<Element>::Node() {                              //Cosntructor per defecte
     element = nullptr;                                                              
 }
-template <class T> Node<T>::Node(const T &elem){                  //Constructor per parametres
+template <class Element> Node<Element>::Node(const Element &elem){                  //Constructor per parametres
     element* = &elem;
 }
-template <class T> Node<T>::Node(const Node& orig) {              //Constructor per copia
+template <class Element> Node<Element>::Node(const Node& orig) {              //Constructor per copia
     element = orig.getElement;
 }
 
 //Destructor
-template <class T> 
-Node<T>::~Node() {
+template <class Element> 
+Node<Element>::~Node() {
 
 }
 
 //GETTERS
-template <class T> 
-Node<T>* Node<T>::getNext(){
+template <class Element> 
+Node<Element>* Node<Element>::getNext(){
     return next;
 }
-template <class T> 
-Node<T>* Node<T>::getPrevious(){
+template <class Element> 
+Node<Element>* Node<Element>::getPrevious(){
     return previous;
 }
-template <class T> 
-Node<T>* Node<T>::getElement(){
+template <class Element> 
+Node<Element>* Node<Element>::getElement(){
     return *element;
 }
 
 //SETTERS
-template <class T> 
-Node<T>::setNext(Node<T>*ptr){
+template <class Element> 
+Node<Element>::setNext(Node<Element>*ptr){
     next = ptr;
 }
-template <class T> 
-Node<T>::setPreviious(Node<T>*ptr){
+template <class Element> 
+Node<Element>::setPreviious(Node<Element>*ptr){
     previous = ptr;
 }
