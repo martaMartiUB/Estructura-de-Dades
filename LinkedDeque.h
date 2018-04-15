@@ -152,7 +152,14 @@ void LinkedDeque<Element>::deleteRear(){
 }
 template <class Element>
 void LinkedDeque<Element>::print(){
+     Node<Element> *tmp;
+    tmp = front->getNext();
     
+    while(tmp!= rear){
+        cout<< tmp->getElement()<<endl;
+        tmp= tmp->getNext();
+        
+    }
 }
 //template <class Element>
 //Node<Element>* LinkedDeque<Element>::getFront()const{
