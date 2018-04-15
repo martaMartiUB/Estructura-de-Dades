@@ -41,7 +41,11 @@ private:
 };
 template <class Element>
 LinkedDeque<Element>::LinkedDeque() {
-    front = nullptr;
+    this->front=new Node<Element>();
+    this->rear=new Node<Element>();
+    
+    this->front->setNext(this->rear);
+    this->rear->setPreviious(this->front);
     num_elements = 0;
     
 }
