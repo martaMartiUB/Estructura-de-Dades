@@ -1,3 +1,30 @@
+//1. Has implementat la LinkedDeque amb templates? Sigui quina sigui la teva resposta,
+//justifica el motiu pel qual has pres aquesta decisió
+
+//    Si, ja que utilitzant templates facilitem la reutilització del codi, 
+//    en certs casos poden facilitar molt la feina i saber implementar-los és important. 
+    
+//2. Tenint en compte la teva implementació del TAD LinkedDeque, indica per a cadascuna
+//de les operacions del TAD LinkedDeque quin és el seu cost computacional teòric.
+//Justifica la resposta
+
+//    bool isEmpty() const;  O(1) Ja que nomes mira si size és igual a 0.
+//    void insertFront(const Element& element); O(1) ja que modificar punters te un cost O(1)
+//    void insertRear(const Element& element);  O(1) ja que modificar punters te un cost O(1)
+//    void deleteFront(); O(1) modificar punters te un cost O(1)
+//    void deleteRear(); O(1) modificar punters te un cost O(1)
+//    void print(); O(n) ja que s'ha de recorrer tots els elements de la Deque
+//    const Element& getFront()const; O(1) retorna un element i sap on està
+//    const Element& getRear()const; O(1) retorna un element i sap on està
+
+//3. Creieu que la classe Node hauria estat millor implementar-la amb encadenaments
+//simples? Justifica la teva resposta:
+
+//    No, fent servir enllaços simples no ens deixaria poder accedir tant al seguent node com al previ, 
+//    i no podriem fer iteracions del principi al final o al revés, d'aquesta manera podem 
+//    accedir a un node en concret per la via més rapida, sigui pel principi o pel final.
+
+
 #include <cstdlib>
 #include <iostream>
 #include <vector>
