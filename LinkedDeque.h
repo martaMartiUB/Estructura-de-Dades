@@ -165,14 +165,14 @@ void LinkedDeque<Element>::print(){
         
     }
 }
-//template <class Element>
-//Node<Element>* LinkedDeque<Element>::getFront()const{
-//    return front;
-//}
-//template <class Element>
-//LinkedDeque<Element>& LinkedDeque<Element>::getRear()const{
-//    return rear;
-//}
+template <class Element>
+Node<Element>* LinkedDeque<Element>::getFront()const{
+    return front->getNext();
+}
+template <class Element>
+Node<Element>* LinkedDeque<Element>::getRear()const{
+    return rear->getPrevious();
+}
 #endif /* LINKEDDEQUE_H */
 
 
